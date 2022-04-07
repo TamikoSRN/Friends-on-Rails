@@ -1,5 +1,11 @@
 # README: PLEASE, READ THIS BEFORE TRYING TO RUN THE APP!
 
+# Link to Heroku in case you want to test the app: https://railedfriends.herokuapp.com/
+
+-----
+
+# PLEASE, READ THE LINES BELOW IN CASE YOU WANT TO TEST THE CODE:
+
 # Installation instructions: (otherwise it won't run!) (please, make sure your Ruby version it's the 3.0.3)
 
 Once you have the repository cloned in your PC, please, open your terminal inside the repository folder and run the following command:
