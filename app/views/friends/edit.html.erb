@@ -1,0 +1,11 @@
+<%= link_to 'Back to Friend list', friends_path, class:"btn btn-dark"%>
+
+<br/><br/>
+
+<h1>Editing Friend</h1>
+
+<br/>
+
+<%= render 'form', friend: @friend %>
+
+<% link_to "Show Friend's profile", @friend, class:"btn btn-secondary"%>

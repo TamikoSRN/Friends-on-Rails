@@ -1,0 +1,46 @@
+
+
+<% if user_signed_in? %>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @friends.each do |friend| %>
+    <% if friend.user == current_user %>
+      <tr>
+        <td>
+        <%= link_to friend.first_name + ' ' + friend.last_name, friend %>
+        </td>
+        <td><%= friend.email %></td>
+        <td><%= friend.phone %></td>
+        <td><%= friend.twitter %></td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Friend', new_friend_path, class:"btn btn-secondary" %>
+
+<% else %>
+<br/>
+
+    <div class="p-5 mb-5 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Welcome to Friends on Rails!</h1>
+            <p class="col-md-8 fs-4"><h5>Sign up now for free and start adding some friends to your life!</h5>
+  <p></p>
+            <h5>Or log in in case you have an account already!</h5></p>
+        </div>
+    </div>
+<% end %>
